@@ -11,7 +11,7 @@ export const siteConfig = {
 } as const;
 
 export const mainNav: NavLink[] = [
-  { label: 'Home', href: '/' },
+
   { label: 'Products', href: '/products' },
   { label: 'Industries', href: '/industries' },
   { label: 'Company', href: '/company' },
