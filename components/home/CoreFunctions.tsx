@@ -24,7 +24,7 @@ const visuals: CoreVisual[] = [
   {
     image: '/images/core-functions/core-control.png',
     alt: 'PDC butterfly valve with pneumatic actuator on an engineering drawing background',
-    kicker: 'Precision Flow Regulation',
+    kicker: 'Industrial Flow Regulation',
     linkLabel: 'Explore Control Products',
     linkHref: '/products',
     accent: '#168447',
@@ -32,7 +32,7 @@ const visuals: CoreVisual[] = [
   {
     image: '/images/core-functions/core-automation.png',
     alt: 'PDC butterfly valve and actuator assembly on an engineering drawing background',
-    kicker: 'Dependable Actuation',
+    kicker: 'Engineered Valve Automation',
     linkLabel: 'Explore Automation Products',
     linkHref: '/products',
     accent: '#0e6b9e',
@@ -40,7 +40,7 @@ const visuals: CoreVisual[] = [
   {
     image: '/images/core-functions/core-isolation.png',
     alt: 'PDC triple offset butterfly valve with gearbox on an engineering drawing background',
-    kicker: 'Positive Process Isolation',
+    kicker: 'Reliable Process Isolation',
     linkLabel: 'Explore Isolation Products',
     linkHref: '/products',
     accent: '#b84c1a',
