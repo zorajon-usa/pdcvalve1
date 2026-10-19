@@ -71,19 +71,19 @@ export const coreFunctions: CoreFunction[] = [
     number: '01',
     title: 'Control',
     description:
-      'Flow regulation solutions for demanding industrial applications.',
+      'Butterfly and damper valves engineered for reliable flow control across demanding industrial applications.',
   },
   {
     number: '02',
     title: 'Automation',
     description:
-      'Electric and pneumatic actuation engineered for dependable operation.',
+      'Complete electric and pneumatic automation packages matched to the valve, application, and control requirements.',
   },
   {
     number: '03',
     title: 'Isolation',
     description:
-      'Reliable valve systems designed for safe process isolation.',
+      'Manual and automated butterfly valves for dependable process isolation and shutoff service.',
   },
 ];
 
