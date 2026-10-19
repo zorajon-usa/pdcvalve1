@@ -127,7 +127,7 @@ export default function Hero() {
 
           {/* Main heading */}
           <div className="mt-4 sm:mt-5">
-            <h1 className="pdc-hero-heading text-[2rem] font-extrabold leading-[1.1] tracking-[-0.045em] text-white sm:text-[2.6rem] lg:text-[3.45rem] xl:text-[3.75rem]">
+            <h1 className="pdc-hero-heading text-[1.9rem] font-extrabold leading-[1.1] tracking-[-0.045em] text-white sm:text-[2.47rem] lg:text-[3.28rem] xl:text-[3.56rem]">
               <span className="pdc-hero-line pdc-hero-line-1 block overflow-hidden pb-[0.08em]">
                 <span className="pdc-hero-line-inner block">Valves with Value.</span>
               </span>
@@ -146,12 +146,20 @@ export default function Hero() {
           </h2>
 
           {/* Description */}
-          <p className="hero-reveal hero-reveal-4 mx-auto mt-4 max-w-[34rem] text-[13.5px] leading-6 text-white/75 sm:mt-5 sm:text-base sm:leading-8 lg:mx-0 lg:mt-5 lg:max-w-[37rem] lg:text-[15px]">
-              PDC designs and manufactures butterfly and damper valves for demanding
-              applications. Our valves are built for long service life, low maintenance,
-              and precise flow control, with customizable automation packages available
-              to match your process requirements.
-          </p>
+<p className="hero-reveal hero-reveal-4 mx-auto mt-4 max-w-[34rem] text-[13.5px] leading-6 text-white/75 sm:mt-5 sm:text-base sm:leading-8 lg:mx-0 lg:mt-5 lg:max-w-[37rem] lg:text-[15px]">
+  <span className="block">
+    PDC designs and manufactures butterfly and damper valves for
+  </span>
+  <span className="block">
+    demanding applications. Our valves are built for long service life,
+  </span>
+  <span className="block">
+    low maintenance, and precise flow control, with customizable
+  </span>
+  <span className="block">
+    automation packages available to match your process requirements.
+  </span>
+</p>
 
           {/* Primary + quote CTA */}
           <div className="pdc-hero-cta hero-reveal hero-reveal-5 mt-6 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center lg:mt-6 lg:justify-start">
