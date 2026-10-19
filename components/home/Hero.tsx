@@ -208,47 +208,25 @@ export default function Hero() {
 function TrustMarquee() {
   return (
     <div
-      className="pdc-trust-marquee relative overflow-hidden border-t border-white/10 bg-black/25 py-3 shadow-[0_-12px_40px_rgba(0,0,0,0.20)] backdrop-blur-md"
+      className="relative border-t border-white/10 bg-black/25 py-3 shadow-[0_-12px_40px_rgba(0,0,0,0.20)] backdrop-blur-md"
       aria-label="PDC capabilities and certifications"
     >
-      {/* Soft disappearance on the left */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[#020b07] via-[#020b07]/80 to-transparent sm:w-24" />
-
-      {/* Soft disappearance on the right */}
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#020b07] via-[#020b07]/80 to-transparent sm:w-24" />
-
-      {/* Moving content */}
-<div className="flex w-full justify-center">
-  <MarqueeGroup />
-</div>
-    </div>
-  );
-}
-
-function MarqueeGroup() {
-  return (
-    <div className="flex shrink-0 items-center">
-      {marqueeItems.map(({ label, icon: Icon }, index) => (
-        <div
-          key={`${label}-${index}`}
-          className="flex flex-wrap items-center justify-center">
-        >
-          <div className="flex items-center gap-2.5 px-4 py-1.5 sm:px-5">
-            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[#55cf86]/25 bg-[#168447]/15 text-[#62d78f] shadow-[0_0_18px_rgba(68,201,122,0.05)] transition-[background-color,border-color,transform] duration-300 group-hover:scale-105 group-hover:border-[#55cf86]/45 group-hover:bg-[#168447]/25">
+      <div className="mx-auto grid max-w-[90rem] grid-cols-7 items-center px-6">
+        {marqueeItems.map(({ label, icon: Icon }) => (
+          <div
+            key={label}
+            className="flex items-center justify-center gap-2.5 px-2 py-1.5"
+          >
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[#55cf86]/25 bg-[#168447]/15 text-[#62d78f]">
               <Icon className="h-3.5 w-3.5" strokeWidth={1.8} />
             </span>
 
-            <span className="whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.09em] text-white/78 sm:text-xs">
+            <span className="whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.09em] text-white/78">
               {label}
             </span>
           </div>
-
-          <span
-            className="mx-1 h-1 w-1 shrink-0 rounded-full bg-[#55cf86]/50 shadow-[0_0_8px_rgba(85,207,134,0.55)]"
-            aria-hidden="true"
-          />
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
