@@ -114,8 +114,8 @@ export default function Hero() {
       {/* =====================================================
           HERO CONTENT
       ====================================================== */}
-      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-84px)] w-full max-w-7xl items-center justify-center px-5 pb-24 pt-20 text-center sm:px-6 sm:pb-28 md:min-h-[calc(100svh-118px)] lg:items-end lg:justify-start lg:px-8 lg:pb-28 lg:pt-7 lg:text-left">
-        <div className="w-full max-w-[690px]">
+<div className="relative z-10 mx-auto flex min-h-[calc(100svh-84px)] w-full max-w-7xl items-center justify-center px-5 pb-24 pt-20 text-center sm:px-6 sm:pb-28 md:min-h-[calc(100svh-118px)] lg:items-end lg:justify-start lg:px-8 lg:pb-36 lg:pt-7 lg:text-left">
+        <div className="w-full max-w-[560px]">
           {/* Eyebrow */}
           <div className="hero-reveal hero-reveal-1 flex justify-center lg:justify-start">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#55cf86]/40 bg-[#082319]/65 px-3.5 py-1.5 text-[9px] font-bold uppercase tracking-[0.16em] text-[#70db99] shadow-[0_10px_30px_rgba(0,0,0,0.20)] backdrop-blur-md sm:text-[11px] lg:px-4 lg:py-2 lg:text-[11px]">
@@ -135,7 +135,7 @@ export default function Hero() {
           </div>
 
           {/* Secondary heading */}
-          <h2 className="hero-reveal hero-reveal-3 mt-2 max-w-[650px] text-[1.35rem] font-bold leading-[1.16] tracking-[-0.03em] sm:mt-3 sm:text-[1.8rem] lg:text-[2.1rem] xl:text-[2.25rem]">
+        <h2 className="hero-reveal hero-reveal-3 mt-2 max-w-[520px] text-[1.35rem] font-bold leading-[1.16] tracking-[-0.03em] sm:mt-3 sm:text-[1.8rem] lg:text-[1.9rem] xl:text-[2rem]">
             <span className="block bg-gradient-to-r from-[#76df99] via-[#45c778] to-[#168447] bg-clip-text text-transparent">
               Engineered Flow Control
             </span>
