@@ -24,52 +24,48 @@ type MarqueeItem = {
 
 const marqueeItems: MarqueeItem[] = [
   {
-    label: 'Since 1970',
-    icon: Award,
-  },
-  {
-    label: 'ISO 9001',
-    icon: BadgeCheck,
-  },
-  {
-    label: 'In-House Machining',
-    icon: Factory,
-  },
-  {
-    label: 'Custom Assemblies',
-    icon: Boxes,
-  },
-  {
-    label: 'Butterfly Valves',
+    label: 'Butterfly & Damper Valves',
     icon: SlidersHorizontal,
-  },
-  {
-    label: 'Pneumatic Actuators',
-    icon: Gauge,
-  },
-  {
-    label: 'Electric Actuators',
-    icon: CircuitBoard,
   },
   {
     label: 'Valve Automation',
     icon: Settings,
   },
   {
-    label: 'Process Control',
-    icon: Workflow,
+    label: 'Pneumatic Actuation',
+    icon: Gauge,
   },
   {
-    label: 'Industrial Applications',
+    label: 'Electric Actuation',
+    icon: CircuitBoard,
+  },
+  {
+    label: 'Application Engineering',
     icon: Cog,
   },
   {
-    label: 'Engineered Solutions',
-    icon: Sparkles,
+    label: 'Custom Valve Assemblies',
+    icon: Boxes,
   },
   {
-    label: 'Quality Manufacturing',
+    label: 'In-House Machining',
+    icon: Factory,
+  },
+  {
+    label: 'Engineered Flow Control',
+    icon: Workflow,
+  },
+  {
+    label: 'ISO 9001 Certified',
+    icon: BadgeCheck,
+  },
+  {
+    label: 'Pittsburgh Built',
     icon: ShieldCheck,
+  },
+  {
+    label: 'Established 1970',
+    icon: Award,
   },
 ];
 
@@ -133,10 +129,7 @@ export default function Hero() {
           <div className="mt-4 sm:mt-5">
             <h1 className="pdc-hero-heading text-[2rem] font-extrabold leading-[1.1] tracking-[-0.045em] text-white sm:text-[2.6rem] lg:text-[3.45rem] xl:text-[3.75rem]">
               <span className="pdc-hero-line pdc-hero-line-1 block overflow-hidden pb-[0.08em]">
-                <span className="pdc-hero-line-inner block">Engineered Flow</span>
-              </span>
-              <span className="pdc-hero-line pdc-hero-line-2 block overflow-hidden pb-[0.08em]">
-                <span className="pdc-hero-line-inner block">Control</span>
+                <span className="pdc-hero-line-inner block">Valves with Value.</span>
               </span>
             </h1>
           </div>
@@ -144,19 +137,20 @@ export default function Hero() {
           {/* Secondary heading */}
           <h2 className="hero-reveal hero-reveal-3 mt-2 max-w-[650px] text-[1.35rem] font-bold leading-[1.16] tracking-[-0.03em] sm:mt-3 sm:text-[1.8rem] lg:text-[2.1rem] xl:text-[2.25rem]">
             <span className="block bg-gradient-to-r from-[#76df99] via-[#45c778] to-[#168447] bg-clip-text text-transparent">
-              Built Around Your
+              Engineered Flow Control
             </span>
-
+          
             <span className="block bg-gradient-to-r from-[#76df99] via-[#45c778] to-[#168447] bg-clip-text text-transparent">
-              Application
+              Built Around Your Application
             </span>
           </h2>
 
           {/* Description */}
           <p className="hero-reveal hero-reveal-4 mx-auto mt-4 max-w-[34rem] text-[13.5px] leading-6 text-white/75 sm:mt-5 sm:text-base sm:leading-8 lg:mx-0 lg:mt-5 lg:max-w-[37rem] lg:text-[15px]">
-            From precision-machined butterfly valves to high-torque actuators,
-            PDC designs and manufactures flow-control solutions engineered for
-            demanding operating environments.
+              PDC designs and manufactures butterfly and damper valves for demanding
+              applications. Our valves are built for long service life, low maintenance,
+              and precise flow control, with customizable automation packages available
+              to match your process requirements.
           </p>
 
           {/* Primary + quote CTA */}
