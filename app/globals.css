@@ -502,20 +502,11 @@
    TRUST MARQUEE
    ========================================================= */
 
-@keyframes pdcTrustMarquee {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-50%, 0, 0); }
-}
-
 .pdc-trust-marquee-track {
-  animation: pdcTrustMarquee 38s linear infinite;
-  backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
-  will-change: transform;
-}
-
-.pdc-trust-marquee:hover .pdc-trust-marquee-track {
-  animation-play-state: paused;
+  animation: none;
+  transform: none;
+  backface-visibility: visible;
+  will-change: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
