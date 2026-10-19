@@ -122,7 +122,7 @@ export default function Hero() {
               <img
                 src="/images/home/pdc-nect-hero-logo.webp"
                 alt="PDC Process Development & Control LLC, a division of NECT"
-                className="h-auto w-[405px] object-contain"
+                className="h-auto w-[415px] object-contain"
               />
             </div>
           {/* Eyebrow */}
