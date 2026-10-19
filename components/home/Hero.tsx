@@ -24,14 +24,6 @@ type MarqueeItem = {
 
 const marqueeItems: MarqueeItem[] = [
   {
-    label: 'Butterfly & Damper Valves',
-    icon: SlidersHorizontal,
-  },
-  {
-    label: 'Valve Automation',
-    icon: Settings,
-  },
-  {
     label: 'Pneumatic Actuation',
     icon: Gauge,
   },
@@ -58,14 +50,6 @@ const marqueeItems: MarqueeItem[] = [
   {
     label: 'ISO 9001 Certified',
     icon: BadgeCheck,
-  },
-  {
-    label: 'Pittsburgh Built',
-    icon: ShieldCheck,
-  },
-  {
-    label: 'Established 1970',
-    icon: Award,
   },
 ];
 
@@ -234,13 +218,9 @@ function TrustMarquee() {
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#020b07] via-[#020b07]/80 to-transparent sm:w-24" />
 
       {/* Moving content */}
-      <div className="pdc-trust-marquee-track flex w-max">
-        <MarqueeGroup />
-
-        <div className="pdc-trust-marquee-copy" aria-hidden="true">
-          <MarqueeGroup />
-        </div>
-      </div>
+<div className="flex w-full justify-center">
+  <MarqueeGroup />
+</div>
     </div>
   );
 }
@@ -251,7 +231,7 @@ function MarqueeGroup() {
       {marqueeItems.map(({ label, icon: Icon }, index) => (
         <div
           key={`${label}-${index}`}
-          className="group flex shrink-0 items-center"
+          className="flex flex-wrap items-center justify-center">
         >
           <div className="flex items-center gap-2.5 px-4 py-1.5 sm:px-5">
             <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[#55cf86]/25 bg-[#168447]/15 text-[#62d78f] shadow-[0_0_18px_rgba(68,201,122,0.05)] transition-[background-color,border-color,transform] duration-300 group-hover:scale-105 group-hover:border-[#55cf86]/45 group-hover:bg-[#168447]/25">
