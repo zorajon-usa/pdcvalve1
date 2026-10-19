@@ -22,10 +22,9 @@ export default function ProductFamilies() {
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-green-dark sm:text-4xl lg:text-[2.75rem]">
                 Industrial Flow Control Products
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-brand-graphite/65">
-                Explore PDC&apos;s complete family of engineered valves and
-                actuators.
-              </p>
+                <p className="mt-4 text-base leading-relaxed text-brand-graphite/65">
+                  Explore PDC&apos;s engineered valve and actuation solutions.
+                </p>
               <div className="mt-6 h-px w-16 bg-brand-green/40" />
             </div>
 
