@@ -89,28 +89,28 @@ export const coreFunctions: CoreFunction[] = [
 
 export const productFamilies: ProductFamily[] = [
   {
-    name: 'Butterfly Damper Valves',
+    name: 'Damper & Control Valves',
     slug: 'butterfly-damper-valves',
     description:
-      'Heavy-duty dampers engineered for high-temperature gas and air flow control.',
+      'Heavy-duty butterfly and damper valves engineered for modulating flow, high-temperature service, and demanding industrial applications.',
   },
   {
     name: 'Butterfly Valves',
     slug: 'butterfly-valves',
     description:
-      'Precision-machined butterfly valves for reliable shutoff and throttling.',
+      'Industrial butterfly valves for reliable shutoff, isolation, and general process service.',
   },
   {
-    name: 'Pneumatic Actuators',
+    name: 'Pneumatic Actuation',
     slug: 'pneumatic-actuators',
     description:
-      'High-torque pneumatic actuators built for fast, dependable valve operation.',
+      'Pneumatic actuator packages sized, mounted, and configured for reliable valve operation.',
   },
   {
-    name: 'Electric Actuators',
+    name: 'Electric Actuation',
     slug: 'electric-actuators',
     description:
-      'Electric actuation with precise positioning and integrated control.',
+      'Electric actuator packages engineered for accurate positioning, dependable operation, and application-specific control.',
   },
 ];
 
