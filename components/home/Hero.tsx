@@ -116,12 +116,21 @@ export default function Hero() {
       ====================================================== */}
 <div className="relative z-10 mx-auto flex min-h-[calc(100svh-84px)] w-full max-w-[90rem] items-center justify-center px-5 pb-24 pt-20 text-center sm:px-6 sm:pb-28 md:min-h-[calc(100svh-118px)] lg:items-end lg:justify-start lg:px-8 lg:pb-36 lg:pt-7 lg:text-left">
         <div className="w-full max-w-[560px]">
+                      {/* PDC / NECT logo lockup */}
+            <div className="mb-6 hidden lg:block">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/home/pdc-nect-hero-logo.webp"
+                alt="PDC Process Development & Control LLC, a division of NECT"
+                className="h-auto w-[310px] object-contain"
+              />
+            </div>
           {/* Eyebrow */}
           <div className="hero-reveal hero-reveal-1 flex justify-center lg:justify-start">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#55cf86]/40 bg-[#082319]/65 px-3.5 py-1.5 text-[9px] font-bold uppercase tracking-[0.16em] text-[#70db99] shadow-[0_10px_30px_rgba(0,0,0,0.20)] backdrop-blur-md sm:text-[11px] lg:px-4 lg:py-2 lg:text-[11px]">
               <span className="h-1.5 w-1.5 rounded-full bg-[#55d487] shadow-[0_0_12px_rgba(85,212,135,0.90)]" />
 
-              Process Development &amp; Control
+              Industrial Valves &amp; Actuation
             </span>
           </div>
 
