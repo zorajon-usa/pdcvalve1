@@ -377,8 +377,8 @@ export default function CoreFunctions({ items }: { items: CoreFunction[] }) {
           </div>
 
           <p className="cf-head-item mt-4 max-w-xl text-[13.5px] leading-6 text-[#4a5e53] sm:text-[15px] sm:leading-7 lg:mt-0 lg:max-w-[22rem] lg:pb-1 lg:text-right">
-            PDC brings precise flow control, dependable automation, and secure
-            isolation together in one engineered valve platform.
+              PDC brings industrial flow control, engineered valve automation, and
+              dependable process isolation together in application-specific valve solutions.
           </p>
         </div>
 
