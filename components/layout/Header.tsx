@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
+
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { Menu, X, Phone, Mail, ChevronDown, ArrowRight } from 'lucide-react';
@@ -292,24 +292,7 @@ export default function Header() {
             scrolled ? 'h-[64px]' : 'h-[84px]',
           )}
         >
-          {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center"
-            onClick={() => setMobileOpen(false)}
-          >
-            <Image
-              src="/images/pdc-logo.png"
-              alt="PDC Valves & Actuators"
-              width={160}
-              height={60}
-              priority
-              className={cn(
-                'w-auto object-contain transition-[height] duration-300 ease-out',
-                scrolled ? 'h-9' : 'h-12',
-              )}
-            />
-          </Link>
+
 
           {/* Desktop nav */}
           <nav className="hidden items-center gap-10 lg:flex">
