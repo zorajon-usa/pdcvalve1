@@ -253,7 +253,7 @@ export default function Header() {
     <div className="sticky top-0 z-50 w-full">
       {/* Utility bar */}
       <div className="hidden bg-brand-green-dark text-white md:block">
-        <div className="mx-auto flex h-[34px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto flex h-[34px] w-full max-w-[90rem] items-center justify-between px-4 sm:px-6 lg:px-8">
           <p className="text-[11px] font-medium tracking-wide text-white/75">
             Engineered Flow Control Since 1970
           </p>
@@ -295,7 +295,7 @@ export default function Header() {
 
 
           {/* Desktop nav */}
-            <nav className="hidden flex-1 items-center justify-around lg:flex">
+            <nav className="hidden w-full items-center justify-between lg:flex">
             {mainNav.map((item) => {
               const isProducts = item.label === 'Products';
               const isIndustries = item.label === 'Industries';
@@ -438,6 +438,8 @@ export default function Header() {
                 </div>
               );
             })}
+
+            <RFQButton size="sm" />
           </nav>
 
           {/* Desktop CTA */}

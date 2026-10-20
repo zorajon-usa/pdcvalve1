@@ -109,14 +109,6 @@ export default function Hero() {
                 className="h-auto w-[415px] object-contain"
               />
             </div>
-          {/* Eyebrow */}
-          <div className="hero-reveal hero-reveal-1 flex justify-center lg:justify-start">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#55cf86]/40 bg-[#082319]/65 px-3.5 py-1.5 text-[9px] font-bold uppercase tracking-[0.16em] text-[#70db99] shadow-[0_10px_30px_rgba(0,0,0,0.20)] backdrop-blur-md sm:text-[11px] lg:px-4 lg:py-2 lg:text-[11px]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#55d487] shadow-[0_0_12px_rgba(85,212,135,0.90)]" />
-
-              Industrial Valves &amp; Actuation
-            </span>
-          </div>
 
           {/* Main heading */}
           <div className="mt-4 sm:mt-5">
@@ -220,11 +212,11 @@ function TrustMarquee() {
       className="relative border-t border-white/10 bg-black/25 py-3 shadow-[0_-12px_40px_rgba(0,0,0,0.20)] backdrop-blur-md"
       aria-label="PDC capabilities and certifications"
     >
-      <div className="mx-auto grid max-w-[90rem] grid-cols-7 items-center px-6">
+        <div className="mx-auto flex max-w-[90rem] items-center justify-between gap-4 px-6">
         {marqueeItems.map(({ label, icon: Icon }) => (
           <div
             key={label}
-            className="flex items-center justify-center gap-2.5 px-2 py-1.5"
+            className="flex shrink-0 items-center justify-center gap-2 px-1 py-1.5"
           >
             <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[#55cf86]/25 bg-[#168447]/15 text-[#62d78f]">
               <Icon className="h-3.5 w-3.5" strokeWidth={1.8} />
