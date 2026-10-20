@@ -104,8 +104,8 @@ export default function Hero() {
             <div className="mb-6 hidden lg:block">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/home/pdc-nect-hero-logo.webp"
-                alt="PDC Process Development & Control LLC, a division of NECT"
+                src="/images/home/pdc-process-control-logo-hd.webp"
+                alt="PDC Process Development & Control LLC"
                 className="h-auto w-[415px] object-contain"
               />
             </div>

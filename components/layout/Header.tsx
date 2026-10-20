@@ -253,27 +253,32 @@ export default function Header() {
     <div className="sticky top-0 z-50 w-full">
       {/* Utility bar */}
       <div className="hidden bg-brand-green-dark text-white md:block">
-          <div className="mx-auto flex h-[34px] w-full max-w-[90rem] items-center justify-between px-4 sm:px-6 lg:px-8">
-          <p className="text-[11px] font-medium tracking-wide text-white/75">
-            Engineered Flow Control Since 1970
-          </p>
-          <div className="flex items-center gap-5">
-            <a
-              href={`tel:${siteConfig.phone}`}
-              className="flex items-center gap-1.5 text-[11px] text-white/70 transition-colors hover:text-white"
-            >
-              <Phone className="h-3 w-3" />
-              {siteConfig.phone}
-            </a>
-            <span className="h-3 w-px bg-white/20" />
-            <a
-              href={`mailto:${siteConfig.email}`}
-              className="flex items-center gap-1.5 text-[11px] text-white/70 transition-colors hover:text-white"
-            >
-              <Mail className="h-3 w-3" />
-              {siteConfig.email}
-            </a>
-          </div>
+          <div className="mx-auto grid h-[34px] w-full max-w-[90rem] grid-cols-[1fr_auto_1fr] items-center px-4 sm:px-6 lg:px-8">
+              <a
+                href={`tel:${siteConfig.phone}`}
+                className="justify-self-start flex items-center gap-1.5 text-[11px] text-white/70 transition-colors hover:text-white"
+              >
+                <Phone className="h-3 w-3" />
+                {siteConfig.phone}
+              </a>
+
+              <div className="justify-self-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/home/division-of-nect.webp"
+                  alt="A Division of NECT"
+                  className="h-[22px] w-auto object-contain"
+                />
+              </div>
+
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="justify-self-end flex items-center gap-1.5 text-[11px] text-white/70 transition-colors hover:text-white"
+              >
+                <Mail className="h-3 w-3" />
+                {siteConfig.email}
+              </a>
+              </div>
         </div>
       </div>
 
@@ -294,158 +299,222 @@ export default function Header() {
         >
 
 
-          {/* Desktop nav */}
-            <nav className="hidden w-full items-center justify-between lg:flex">
-            {mainNav.map((item) => {
-              const isProducts = item.label === 'Products';
-              const isIndustries = item.label === 'Industries';
-              const isCompany = item.label === 'Company';
-              return (
-                <div
-                  key={item.href}
-                  ref={isProducts ? megaRef : isIndustries ? industriesRef : isCompany ? companyRef : undefined}
-                  onMouseEnter={isProducts ? openMega : isIndustries ? openIndustries : isCompany ? openCompany : undefined}
-                  onMouseLeave={isProducts ? closeMega : isIndustries ? closeIndustries : isCompany ? closeCompany : undefined}
-                  // Keyboard parity: focusing the trigger opens the menu, and
-                  // moving focus out of the group closes it.
-                  onFocusCapture={isProducts ? openMega : isIndustries ? openIndustries : isCompany ? openCompany : undefined}
-                  onBlurCapture={
-                    isProducts || isIndustries || isCompany
-                      ? (e) => handleGroupBlur(e, closeAllNow)
-                      : undefined
-                  }
-                  className="relative"
-                >
-                  <Link
-                    href={item.href}
-                    aria-haspopup={isProducts || isIndustries || isCompany ? 'true' : undefined}
-                    aria-expanded={
-                      isProducts ? megaOpen : isIndustries ? industriesOpen : isCompany ? companyOpen : undefined
-                    }
-                    className={cn(
-                      'nav-underline flex items-center gap-1 text-sm font-semibold text-brand-graphite transition-colors duration-200 hover:text-brand-green focus-visible:outline-none focus-visible:text-brand-green',
-                    )}
-                  >
-                    {item.label}
-                    {(isProducts || isIndustries || isCompany) && (
-                      <span className="flex flex-col -space-y-1.5">
-                        <ChevronDown
-                          className={cn(
-                            'h-3 w-3 text-brand-steel transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]',
-                            (isProducts && megaOpen) || (isIndustries && industriesOpen) || (isCompany && companyOpen)
-                              ? 'rotate-180 text-brand-green'
-                              : '',
-                          )}
-                        />
-                        <ChevronDown
-                          className={cn(
-                            'h-3 w-3 text-brand-steel transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]',
-                            (isProducts && megaOpen) || (isIndustries && industriesOpen) || (isCompany && companyOpen)
-                              ? 'rotate-180 text-brand-green'
-                              : '',
-                          )}
-                        />
-                      </span>
-                    )}
-                  </Link>
+ {/* Desktop nav */}
+<nav className="hidden w-full items-center justify-between lg:flex">
+  {mainNav.map((item) => {
+    const isProducts = item.label === 'Products';
+    const isIndustries = item.label === 'Industries';
+    const isCompany = item.label === 'Company';
 
-                  {/* Company dropdown */}
-                  {isCompany && (
-                    <div
+    return (
+      <div
+        key={item.href}
+        ref={
+          isProducts
+            ? megaRef
+            : isIndustries
+              ? industriesRef
+              : isCompany
+                ? companyRef
+                : undefined
+        }
+        onMouseEnter={
+          isProducts
+            ? openMega
+            : isIndustries
+              ? openIndustries
+              : isCompany
+                ? openCompany
+                : undefined
+        }
+        onMouseLeave={
+          isProducts
+            ? closeMega
+            : isIndustries
+              ? closeIndustries
+              : isCompany
+                ? closeCompany
+                : undefined
+        }
+        onFocusCapture={
+          isProducts
+            ? openMega
+            : isIndustries
+              ? openIndustries
+              : isCompany
+                ? openCompany
+                : undefined
+        }
+        onBlurCapture={
+          isProducts || isIndustries || isCompany
+            ? (e) => handleGroupBlur(e, closeAllNow)
+            : undefined
+        }
+        className="relative"
+      >
+        <Link
+          href={item.href}
+          aria-haspopup={
+            isProducts || isIndustries || isCompany ? 'true' : undefined
+          }
+          aria-expanded={
+            isProducts
+              ? megaOpen
+              : isIndustries
+                ? industriesOpen
+                : isCompany
+                  ? companyOpen
+                  : undefined
+          }
+          className={cn(
+            'nav-underline flex items-center gap-1 text-sm font-semibold text-brand-graphite transition-colors duration-200 hover:text-brand-green focus-visible:outline-none focus-visible:text-brand-green',
+          )}
+        >
+          {item.label}
+
+          {(isProducts || isIndustries || isCompany) && (
+            <span className="flex flex-col -space-y-1.5">
+              <ChevronDown
+                className={cn(
+                  'h-3 w-3 text-brand-steel transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]',
+                  (isProducts && megaOpen) ||
+                    (isIndustries && industriesOpen) ||
+                    (isCompany && companyOpen)
+                    ? 'rotate-180 text-brand-green'
+                    : '',
+                )}
+              />
+
+              <ChevronDown
+                className={cn(
+                  'h-3 w-3 text-brand-steel transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]',
+                  (isProducts && megaOpen) ||
+                    (isIndustries && industriesOpen) ||
+                    (isCompany && companyOpen)
+                    ? 'rotate-180 text-brand-green'
+                    : '',
+                )}
+              />
+            </span>
+          )}
+        </Link>
+
+        {/* Company dropdown */}
+        {isCompany && (
+          <div
+            className={cn(
+              'pdc-menu absolute left-1/2 hidden w-[min(560px,calc(100vw-2rem))] -translate-x-1/2 origin-top overflow-hidden rounded-b-2xl border-x border-b border-brand-green-dark/10 bg-white shadow-[0_24px_60px_rgba(7,61,43,0.16)] lg:block',
+              scrolled
+                ? 'top-[calc(100%+22px)]'
+                : 'top-[calc(100%+32px)]',
+              companyOpen
+                ? 'pointer-events-auto visible translate-y-0 scale-100 opacity-100'
+                : 'pointer-events-none invisible -translate-y-1.5 scale-[0.99] opacity-0',
+            )}
+            onMouseEnter={openCompany}
+            onMouseLeave={closeCompany}
+          >
+            <span
+              className={cn(
+                'absolute inset-x-0 top-0 h-px origin-left bg-gradient-to-r from-brand-green via-brand-green/40 to-transparent transition-transform duration-700 ease-out',
+                companyOpen ? 'scale-x-100' : 'scale-x-0',
+              )}
+            />
+
+            <div className="grid grid-cols-[1.12fr_0.88fr] gap-5 p-5">
+              <div>
+                <div className="mb-3 flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand-green" />
+
+                  <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-green">
+                    PDC Company
+                  </span>
+                </div>
+
+                <ul className="space-y-1">
+                  {companyMenuLinks.map((link, li) => (
+                    <li
+                      key={link.href}
                       className={cn(
-                        'pdc-menu absolute left-1/2 hidden w-[min(560px,calc(100vw-2rem))] -translate-x-1/2 origin-top overflow-hidden rounded-b-2xl border-x border-b border-brand-green-dark/10 bg-white shadow-[0_24px_60px_rgba(7,61,43,0.16)] lg:block',
-                        scrolled
-                          ? 'top-[calc(100%+22px)]'
-                          : 'top-[calc(100%+32px)]',
-                        companyOpen
-                          ? 'pointer-events-auto visible translate-y-0 scale-100 opacity-100'
-                          : 'pointer-events-none invisible -translate-y-1.5 scale-[0.99] opacity-0',
+                        'pdc-menu-item',
+                        companyOpen && 'is-open',
                       )}
-                      onMouseEnter={openCompany}
-                      onMouseLeave={closeCompany}
+                      style={{ ['--i' as string]: li }}
                     >
-                      <span
-                        className={cn(
-                          'absolute inset-x-0 top-0 h-px origin-left bg-gradient-to-r from-brand-green via-brand-green/40 to-transparent transition-transform duration-700 ease-out',
-                          companyOpen ? 'scale-x-100' : 'scale-x-0',
-                        )}
-                      />
-                      <div className="grid grid-cols-[1.12fr_0.88fr] gap-5 p-5">
-                        <div>
-                          <div className="mb-3 flex items-center gap-2">
-                            <span className="h-1.5 w-1.5 rounded-full bg-brand-green" />
-                            <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-green">
-                              PDC Company
-                            </span>
-                          </div>
-                          <ul className="space-y-1">
-                            {companyMenuLinks.map((link, li) => (
-                              <li
-                                key={link.href}
-                                className={cn('pdc-menu-item', companyOpen && 'is-open')}
-                                style={{ ['--i' as string]: li }}
-                              >
-                                <Link
-                                  href={link.href}
-                                  className="group/mi flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-semibold text-brand-graphite/72 transition-all duration-200 hover:bg-brand-light-bg hover:text-brand-green-dark focus-visible:bg-brand-light-bg focus-visible:text-brand-green-dark focus-visible:outline-none"
-                                  onClick={closeAllNow}
-                                >
-                                  <span className="transition-transform duration-300 group-hover/mi:translate-x-1">
-                                    {link.label}
-                                  </span>
-                                  <ArrowRight className="h-3.5 w-3.5 -translate-x-1 text-brand-green/30 opacity-0 transition-all duration-300 group-hover/mi:translate-x-0 group-hover/mi:text-brand-green group-hover/mi:opacity-100" />
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+                      <Link
+                        href={link.href}
+                        className="group/mi flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-semibold text-brand-graphite/72 transition-all duration-200 hover:bg-brand-light-bg hover:text-brand-green-dark focus-visible:bg-brand-light-bg focus-visible:text-brand-green-dark focus-visible:outline-none"
+                        onClick={closeAllNow}
+                      >
+                        <span className="transition-transform duration-300 group-hover/mi:translate-x-1">
+                          {link.label}
+                        </span>
 
-                        <div className="relative overflow-hidden rounded-xl border border-brand-green-dark/10 bg-brand-green-dark p-5 text-white">
-                          <div className="blueprint-grid absolute inset-0 opacity-20" />
-                          <div className="relative">
-                            <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-green">
-                              Since 1970
-                            </span>
-                            <h3 className="mt-2 text-lg font-extrabold leading-tight tracking-tight">
-                              Customized flow control solutions
-                            </h3>
-                            <p className="mt-3 text-xs leading-5 text-white/55">
-                              Valves, actuators, custom configurations, application support, and in-house machining.
-                            </p>
-                            <div className="mt-5 grid grid-cols-2 gap-2 border-t border-white/10 pt-4">
-                              <div>
-                                <div className="text-base font-extrabold text-white">300+</div>
-                                <div className="text-[9px] uppercase tracking-[0.13em] text-white/35">Casting patterns</div>
-                              </div>
-                              <div>
-                                <div className="text-base font-extrabold text-white">ISO</div>
-                                <div className="text-[9px] uppercase tracking-[0.13em] text-white/35">9001:2015</div>
-                              </div>
-                            </div>
-                            <Link
-                              href="/company"
-                              onClick={closeAllNow}
-                              className="mt-5 inline-flex items-center gap-2 text-xs font-semibold text-brand-green transition-all hover:gap-3"
-                            >
-                              Company overview
-                              <ArrowRight className="h-3.5 w-3.5" />
-                            </Link>
-                          </div>
-                        </div>
+                        <ArrowRight className="h-3.5 w-3.5 -translate-x-1 text-brand-green/30 opacity-0 transition-all duration-300 group-hover/mi:translate-x-0 group-hover/mi:text-brand-green group-hover/mi:opacity-100" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="relative overflow-hidden rounded-xl border border-brand-green-dark/10 bg-brand-green-dark p-5 text-white">
+                <div className="blueprint-grid absolute inset-0 opacity-20" />
+
+                <div className="relative">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-green">
+                    Since 1970
+                  </span>
+
+                  <h3 className="mt-2 text-lg font-extrabold leading-tight tracking-tight">
+                    Customized flow control solutions
+                  </h3>
+
+                  <p className="mt-3 text-xs leading-5 text-white/55">
+                    Valves, actuators, custom configurations, application
+                    support, and in-house machining.
+                  </p>
+
+                  <div className="mt-5 grid grid-cols-2 gap-2 border-t border-white/10 pt-4">
+                    <div>
+                      <div className="text-base font-extrabold text-white">
+                        300+
+                      </div>
+
+                      <div className="text-[9px] uppercase tracking-[0.13em] text-white/35">
+                        Casting patterns
                       </div>
                     </div>
-                  )}
+
+                    <div>
+                      <div className="text-base font-extrabold text-white">
+                        ISO
+                      </div>
+
+                      <div className="text-[9px] uppercase tracking-[0.13em] text-white/35">
+                        9001:2015
+                      </div>
+                    </div>
+                  </div>
+
+                  <Link
+                    href="/company"
+                    onClick={closeAllNow}
+                    className="mt-5 inline-flex items-center gap-2 text-xs font-semibold text-brand-green transition-all hover:gap-3"
+                  >
+                    Company overview
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
                 </div>
-              );
-            })}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  })}
 
-            <RFQButton size="sm" />
-          </nav>
-
-          {/* Desktop CTA */}
-<div className="hidden flex-1 justify-end lg:flex">
   <RFQButton size="sm" />
-</div>
+</nav>
 
           {/* Mobile toggle */}
           <button
