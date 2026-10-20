@@ -98,7 +98,7 @@ export default function Hero() {
       {/* =====================================================
           HERO CONTENT
       ====================================================== */}
-<div className="relative z-10 mx-auto flex min-h-[calc(100svh-84px)] w-full max-w-[90rem] items-center justify-center px-5 pb-24 pt-20 text-center sm:px-6 sm:pb-28 md:min-h-[calc(100svh-118px)] lg:items-start lg:justify-start lg:px-8 lg:pb-36 lg:pt-12 lg:text-left">
+<div className="relative z-10 mx-auto flex min-h-[calc(100svh-84px)] w-full max-w-[90rem] items-center justify-center px-5 pb-24 pt-20 text-center sm:px-6 sm:pb-28 md:min-h-[calc(100svh-118px)] lg:items-end lg:justify-start lg:px-8 lg:pb-36 lg:pt-7 lg:text-left">
         <div className="w-full max-w-[560px]">
                       {/* PDC / NECT logo lockup */}
             <div className="mb-6 hidden lg:block">
