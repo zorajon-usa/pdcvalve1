@@ -62,7 +62,7 @@ export default function Hero() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <picture>
           <source
-            media="(min-width: 768px)"
+            media="(min-width: 1024px)"
             srcSet="/images/home/hero-flow-desktop.webp"
           />
           <img
@@ -139,7 +139,16 @@ export default function Hero() {
           </h2>
 
           {/* Description */}
-<p className="hero-reveal hero-reveal-4 mx-auto mt-4 max-w-[34rem] text-[13.5px] leading-6 text-white/75 sm:mt-5 sm:text-base sm:leading-8 lg:mx-0 lg:mt-5 lg:max-w-[37rem] lg:text-[15px]">
+{/* Description — natural wrap on mobile/tablet */}
+<p className="hero-reveal hero-reveal-4 mx-auto mt-4 max-w-[34rem] text-[13.5px] leading-6 text-white/75 sm:mt-5 sm:text-base sm:leading-8 lg:hidden">
+  PDC designs and manufactures butterfly and damper valves for demanding
+  applications. Our valves are built for long service life, low maintenance,
+  and precise flow control, with customizable automation packages available
+  to match your process requirements.
+</p>
+
+{/* Description — controlled desktop line breaks */}
+<p className="hero-reveal hero-reveal-4 mt-5 hidden max-w-[37rem] text-[15px] leading-8 text-white/75 lg:block">
   <span className="block">
     PDC designs and manufactures butterfly and damper valves for
   </span>
@@ -187,7 +196,7 @@ export default function Hero() {
       </div>
 
       {/* Full-width continuous trust and capabilities ribbon */}
-      <div className="hero-reveal hero-reveal-6 absolute inset-x-0 bottom-0 z-10 w-full">
+      <div className="hero-reveal hero-reveal-6 absolute inset-x-0 bottom-0 z-10 hidden w-full lg:block">
         <TrustMarquee />
       </div>
 
