@@ -292,7 +292,7 @@ export default function Header() {
       >
         <div
           className={cn(
-'mx-auto flex max-w-[90rem] items-center px-4 transition-[height] duration-300 ease-out sm:px-6 lg:px-8',
+'mx-auto flex w-full max-w-[90rem] items-center px-4 transition-[height] duration-300 ease-out sm:px-6 lg:px-8',
             scrolled ? 'h-[64px]' : 'h-[84px]',
           )}
         >

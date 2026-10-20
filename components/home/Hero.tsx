@@ -98,7 +98,7 @@ export default function Hero() {
       {/* =====================================================
           HERO CONTENT
       ====================================================== */}
-<div className="relative z-10 mx-auto flex min-h-[calc(100svh-84px)] w-full max-w-[90rem] items-center justify-center px-5 pb-24 pt-20 text-center sm:px-6 sm:pb-28 md:min-h-[calc(100svh-118px)] lg:items-end lg:justify-start lg:px-8 lg:pb-36 lg:pt-7 lg:text-left">
+<div className="relative z-10 mx-auto flex min-h-[calc(100svh-84px)] w-full max-w-[90rem] items-center justify-center px-5 pb-24 pt-20 text-center sm:px-6 sm:pb-28 md:min-h-[calc(100svh-118px)] lg:items-start lg:justify-start lg:px-8 lg:pb-36 lg:pt-12 lg:text-left">
         <div className="w-full max-w-[560px]">
                       {/* PDC / NECT logo lockup */}
             <div className="mb-6 hidden lg:block">
@@ -111,7 +111,7 @@ export default function Hero() {
             </div>
 
           {/* Main heading */}
-          <div className="mt-4 sm:mt-5">
+          <div className="mt-4 sm:mt-5 lg:mt-0">
             <h1 className="pdc-hero-heading text-[1.9rem] font-extrabold leading-[1.1] tracking-[-0.045em] text-white sm:text-[2.47rem] lg:text-[3.28rem] xl:text-[3.56rem]">
               <span className="pdc-hero-line pdc-hero-line-1 block overflow-hidden pb-[0.08em]">
                 <span className="pdc-hero-line-inner block">Valves with Value.</span>
@@ -212,11 +212,11 @@ function TrustMarquee() {
       className="relative border-t border-white/10 bg-black/25 py-3 shadow-[0_-12px_40px_rgba(0,0,0,0.20)] backdrop-blur-md"
       aria-label="PDC capabilities and certifications"
     >
-        <div className="mx-auto flex max-w-[90rem] items-center justify-between gap-4 px-6">
+<div className="mx-auto flex w-full max-w-[90rem] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         {marqueeItems.map(({ label, icon: Icon }) => (
           <div
             key={label}
-            className="flex shrink-0 items-center justify-center gap-2 px-1 py-1.5"
+className="flex shrink-0 items-center justify-center gap-2 px-1 py-1.5 first:pl-0 last:pr-0"
           >
             <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[#55cf86]/25 bg-[#168447]/15 text-[#62d78f]">
               <Icon className="h-3.5 w-3.5" strokeWidth={1.8} />
